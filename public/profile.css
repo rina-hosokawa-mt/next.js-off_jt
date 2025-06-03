@@ -60,16 +60,7 @@ p {
   padding-left: 20px;
   margin-top: 0;
   margin-bottom: 8px;
-}
-
-a {
-  color: #4CAF50;
-  text-decoration: none;
-  margin-right: 15px;
-}
-
-a:hover {
-  text-decoration: underline;
+  line-height: 25px;
 }
 
 /*dl,dt,dd指定*/
