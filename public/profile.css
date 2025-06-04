@@ -63,7 +63,6 @@ p {
   line-height: 25px;
 }
 
-/*dl,dt,dd指定*/
 .details {
   display: grid;
   grid-template-columns: 100px 1fr;
