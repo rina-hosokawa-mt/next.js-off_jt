@@ -1,3 +1,4 @@
+//geminiのテスト用ファイル
 let count = 0;
 const counterElement = document.getElementById("counter");
 const increaseButton = document.getElementById("increase");
