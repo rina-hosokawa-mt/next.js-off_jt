@@ -1,24 +1,16 @@
-<!--geminiのテスト用ファイル-->
+<!--gemini test-->
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="gemini.js" defer></script>
     <title>カウンターアプリ</title>
   </head>
   <body>
-    <section>
-      <h1>現在のカウント数</h1>
-    </section>
-    <section>
-      <span id="counter" class="number">0</span>
-    </section>
-    <section>
-        <div class="button">
-          <button id="increase" class="button1">+1</button>
-          <button id="decrease" class="button2">-1</button>
-        </div>
-      <script src="gemini.js"></script>
-    </section>
+    <h1>現在の回数</h1>
+    <p id="counter">0</p>
+    <button id="increment">+1</button>
+    <button id="decrement">-1</button>
   </body>
 </html>

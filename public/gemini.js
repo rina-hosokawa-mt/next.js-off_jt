@@ -1,15 +1,16 @@
-//geminiのテスト用ファイル
-let count = 0;
-const counterElement = document.getElementById("counter");
-const increaseButton = document.getElementById("increase");
-const decreaseButton = document.getElementById("decrease");
+//geminiの追加テスト用ファイル
+const counter = document.getElementById("counter");
+const increment = document.getElementById("increment");
+const decrement = document.getElementById("decrement");
 
-increaseButton.addEventListener("click", () => {
+let count = 0;
+
+increment.addEventListener("click", () => {
   count++;
-  counterElement.textContent = count;
+  counter.textContent = count;
 });
 
-decreaseButton.addEventListener("click", () => {
+decrement.addEventListener("click", () => {
   count--;
-  counterElement.textContent = count;
+  counter.textContent = count;
 });
