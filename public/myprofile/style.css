@@ -1,0 +1,81 @@
+body {
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: #fff8e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin: 0;
+}
+
+.profile-card {
+  background-color: #fff;
+  background-image: url("background.jpg"); /* ← ここに画像のURLを指定 */
+  background-size: cover;/* カード全体にフィットさせる */
+  background-position: center; /* 中央に配置 */
+  background-repeat: no-repeat; /* 繰り返さない */
+  border: 3px solid #fbc02d;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 40%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* ← 高さを揃えるポイント */
+  margin-bottom:10px;
+}
+
+.profile-photo img {
+  width: 255px;
+  height: 270px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 3px solid #ffe082;
+  margin-right: 20px;
+}
+.profile-box.box0 {
+  background-color: #fffde7;
+  border: 2px solid #ffe082;
+  border-radius: 8px;
+  padding: 28px;         /* ← 内側の余白を増やす */
+  margin-bottom: 24px;
+  font-size: 1.2em;      /* ← 文字サイズを少し大きく */
+  width: 40%;           /* ← 幅を広げる（必要に応じて） */
+  min-height: 100px;     /* ← 高さを最低200pxにする（任意） */
+  box-sizing: border-box;
+  margin-left:30px;
+}
+
+.profile-box.box1 {
+  background-color: #fffde7;
+  border: 2px solid #ffe082;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 1em;
+}
+
+.profile-box.box2 {
+  background-color: #fffde7;
+  border: 2px solid #ffe082;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 1em;
+}
+.box2-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.box2-wrapper .box2 {
+  flex: 1 1 calc(50% - 12px);
+  box-sizing: border-box;
+}
+
+
+

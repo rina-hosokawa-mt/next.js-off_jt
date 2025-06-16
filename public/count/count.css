@@ -1,0 +1,16 @@
+body {
+  font-family:sans-serif;
+  text-alighn:center;
+  margin-top:50px;
+}
+
+#count{
+  font-size:40px;
+  margin:20px;
+}
+
+button{
+  font-size:24px;
+  margin:10px;
+  padding:10px 20px;
+}
