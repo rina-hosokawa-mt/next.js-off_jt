@@ -12,27 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const job = inputJob.value;
     const introduce = inputIntroduce.value.trim();
 
-    const errors = [];
-
-    if (name === "") {
-      errors.push("名前を入力してください。");
-    }
-
-    if (Number.isNaN(age)) {
-      errors.push("年齢を入力してください。");
-    } else if (age < 18) {
-      errors.push("年齢は18歳以上で入力してください。");
-    }
-
-    if (job === "") {
-      errors.push("職業を選択してください。");
-    }
-
-    if (errors.length > 0) {
-      alert(errors.join("\n"));
-      return;
-    }
-
     const inputData = {
       name,
       age,
@@ -40,8 +19,34 @@ document.addEventListener("DOMContentLoaded", () => {
       introduce,
     };
 
+    const errors = validateForm(inputData);
+
+    if (errors.length > 0) {
+      alert(errors.join("\n"));
+      return;
+    }
+
     console.log("送信データ(JSON):");
-    console.log(JSON.stringify(inputData, null, 2));
+    console.log(JSON.stringify(inputData));
     alert("送信されました！");
   });
+
+  function validateForm(data) {
+    const errors = [];
+
+    if (data.name === "") {
+      errors.push("名前を入力してください。");
+    }
+
+    if (Number.isNaN(data.age)) {
+      errors.push("年齢を入力してください。");
+    } else if (data.age < 18) {
+      errors.push("年齢は18歳以上で入力してください。");
+    }
+
+    if (data.job === "") {
+      errors.push("職業を選択してください。");
+    }
+    return errors;
+  }
 });

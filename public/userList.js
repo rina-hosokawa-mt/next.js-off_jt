@@ -1,14 +1,30 @@
+import { BASE_API_URL } from "./common.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const loadingEl = document.getElementById("loading");
   const containerEl = document.getElementById("container");
 
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("ネットワークエラーです");
+  async function fetchWithRetry(url, options = {}, retries = 3) {
+    for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+          throw new Error(`HTTPエラー: ${response.status}`);
+        }
+        return await response.json();
+      } catch (error) {
+        console.warn(`Fetch attempt ${attempt} failed:`, error.message);
+
+        if (attempt === retries) {
+          throw new Error("API取得に失敗しました（リトライ上限）");
+        }
+
+        await new Promise((resolve) => setTimeout(resolve, 1000));
       }
-      return response.json();
-    })
+    }
+  }
+
+  fetchWithRetry(`${BASE_API_URL}/users`)
     .then((users) => {
       loadingEl.style.display = "none";
       const ul = document.createElement("ul");
