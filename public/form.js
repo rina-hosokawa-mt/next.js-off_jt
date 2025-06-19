@@ -26,8 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    console.log("送信データ(JSON):");
-    console.log(JSON.stringify(inputData));
+    console.log("送信データ:\n${JSON.stringify(data, null, 2)}");
     alert("送信されました！");
   });
 
