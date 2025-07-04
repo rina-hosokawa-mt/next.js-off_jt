@@ -1,8 +1,15 @@
-export default function Home() {
-  const name: string = "Yuki";
+import Link from "next/link";
+
+export const metadata = {
+  title: "トップページ",
+  description: "app/page.tsxトップページです",
+};
+
+export default function HomePage() {
   return (
     <main>
-      <h1>こんにちは、{name}さん</h1>
+      <h1>ようこそ</h1>
+      <Link href="/memos">メモ一覧へ</Link>
     </main>
   );
 }
