@@ -1,10 +1,6 @@
+import { appMemos } from "@/app/data";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-
-const appMemos = [
-  { id: "1", title: "sabrina", content: "26,152,America" },
-  { id: "2", title: "taylor", content: "36,178,America" },
-];
 
 export const metadata = {
   title: "メモ詳細ページ",

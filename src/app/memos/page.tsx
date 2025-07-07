@@ -1,14 +1,10 @@
+import { appMemos } from "@/app/data";
 import Link from "next/link";
 
 export const metadata = {
   title: "メモ一覧ページ",
   description: "app-router演習メモ一覧",
 };
-
-const appMemos = [
-  { id: "1", title: "sabrina" },
-  { id: "2", title: "taylor" },
-];
 
 export default function MemosPage() {
   return (
