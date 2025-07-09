@@ -1,15 +1,17 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "トップページ",
-  description: "app/page.tsxトップページです",
+  title: "メモトップページ",
+  description: "app-router演習トップページです",
 };
 
 export default function HomePage() {
   return (
     <main>
-      <h1>ようこそ</h1>
-      <Link href="/memos">メモ一覧へ</Link>
+      <h1>{metadata.title}</h1>
+      <Link href="/memos" className="link-color">
+        メモ一覧へ
+      </Link>
     </main>
   );
 }

@@ -16,12 +16,20 @@ export default function MemoDetailPage({ params }: { params: { id: string } }) {
 
   return (
     <main>
-      <h1>{memo.title}</h1>
+      <h1>{metadata.title}</h1>
+      <h2>{memo.title}</h2>
       <p>{memo.content}</p>
       <nav>
-        <Link href="/memos">メモ一覧ページへ</Link>
-        <br />
-        <Link href="/">トップに戻る</Link>
+        <p>
+          <Link href="/memos" className="link-color">
+            メモ一覧ページへ
+          </Link>
+        </p>
+        <p>
+          <Link href="/" className="link-color">
+            トップに戻る
+          </Link>
+        </p>
       </nav>
     </main>
   );

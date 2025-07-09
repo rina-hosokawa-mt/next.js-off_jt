@@ -9,7 +9,7 @@ export const metadata = {
 export default function MemosPage() {
   return (
     <main>
-      <h1>メモの一覧ページ</h1>
+      <h1>{metadata.title}</h1>
       <ul>
         {appMemos.map((memo) => (
           <li key={memo.id}>
@@ -18,7 +18,9 @@ export default function MemosPage() {
         ))}
       </ul>
       <p>
-        <Link href="/">トップに戻る</Link>
+        <Link href="/" className="link-color">
+          トップに戻る
+        </Link>
       </p>
     </main>
   );
