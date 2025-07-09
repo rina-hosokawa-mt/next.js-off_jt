@@ -1,8 +1,17 @@
-export default function Home() {
-  const name: string = "Yuki";
+import Link from "next/link";
+
+export const metadata = {
+  title: "メモトップページ",
+  description: "app-router演習トップページです",
+};
+
+export default function HomePage() {
   return (
     <main>
-      <h1>こんにちは、{name}さん</h1>
+      <h1>{metadata.title}</h1>
+      <Link href="/memos" className="link-color">
+        メモ一覧へ
+      </Link>
     </main>
   );
 }
