@@ -7,8 +7,13 @@ export const metadata = {
   description: "app-router演習メモの詳細ページ",
 };
 
-export default function MemoDetailPage({ params }: { params: { id: string } }) {
-  const memo = appMemos.find((m) => m.id === params.id);
+export default async function MemoDetailPage(props: {
+  params: Promise<{ id: string }>;
+}) {
+  const resolvedParams = await props.params;
+  const id = resolvedParams.id;
+
+  const memo = await Promise.resolve(appMemos.find((m) => m.id === id));
 
   if (!memo) {
     notFound();
